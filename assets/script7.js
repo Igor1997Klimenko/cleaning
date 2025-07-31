@@ -288,3 +288,51 @@ window.onload = function () {
     localStorage.removeItem("emailfailed");
   }
 };
+
+// 
+$(document).ready(function () {
+  const section = $('.bubble-section');
+
+  function createBubble() {
+    if ($(window).width() < 480) return; // не создаём пузырьки на мобильных
+    const sectionHeight = section.height();
+
+    const bubble = $('<div class="bubble"></div>');
+
+    const size = Math.random() * 50 + 40;
+    const left = Math.random() * section.width();
+    const duration = Math.random() * 30 + 30;
+
+    bubble.css({
+      width: size + 'px',
+      height: size + 'px',
+      left: left + 'px',
+      top: '-50px',
+      animationDuration: duration + 's',
+      transformStyle: 'preserve-3d',
+    });
+
+    const styleSheet = document.styleSheets[0];
+    const animName = `fallDownDynamic_${Date.now()}_${Math.floor(Math.random()*1000)}`;
+
+    const keyframes = `
+      @keyframes ${animName} {
+        0% { transform: translateY(0) scale(1); opacity: 0.7; }
+        100% { transform: translateY(${sectionHeight + 100}px) scale(1); opacity: 0.7; }
+      }
+    `;
+
+    styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+    bubble.css('animation-name', animName);
+
+    section.append(bubble);
+
+    setTimeout(() => {
+      bubble.remove();
+    }, duration * 1000);
+  }
+
+  if ($(window).width() >= 768) {
+    setInterval(createBubble, 800);
+  }
+});

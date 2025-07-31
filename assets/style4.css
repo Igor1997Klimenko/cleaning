@@ -40,8 +40,8 @@
 
   /* colors */
   --body-color:#ffff;
-  --PrimaryColor : #166490;
-  --secondary-color:#01D0AB;
+  --PrimaryColor : #82c6ed;
+  --secondary-color:#2d4c5e;
   --alt-color:#e7f6ff;
   --alt-overlay:206, 233, 249;
   --card-color:#ffff;
@@ -63,21 +63,20 @@
   --wave-mask-size: 100px 100%;
   --footer-bg:#06283c;
   --bg-color: #ffffff;
-  --text-color: #000000;
+  --text-color: #2d4c5e;
   --card-bg: #f8f9fa;
   --hover-bg: #e9ecef;
   --body-bg: #ffffff;
   --border-color: #dddddd;
  
 /* text-colors */
---primary-text: #166490;
---heading-text: #000000;
---dark-text:#030E1F;
+--primary-text: #2d4c5e;
+--heading-text:#2d4c5e;
+--dark-text:#2d4c5e;
 --para-text: #5B5B5B;
 --white-text: #ffffff;
 --form-text: #4F4F4F;
 --danger-text: #fa5050;
-
   /* font family */
   --PrimaryFont :  "Roboto", sans-serif;
 }
@@ -87,7 +86,7 @@
 /* colors */
 --body-color:#041b28;
 --PrimaryColor : #1e6a96;
---secondary-color:#00DBB3;
+--secondary-color:#2d4c5e;
 --alt-color:#102b3a;
 --alt-overlay:16, 43, 58;
 --card-color:#052333;
@@ -161,11 +160,12 @@ body{
 }
 
 .success-btn{
-    background-color: var(--SuccessColor) !important;
-    border-color: var(--SuccessColor) !important ;
+    background-color: var(--PrimaryColor) !important;
+    border-color: var(--PrimaryColor) !important ;
     color: white;
     min-width: 140px !important;
     border-radius: 5px !important;
+    border: 1px solid var(--form-input-bg) !important;
     padding: 14px;
 }
 
@@ -173,6 +173,21 @@ body{
     background-color: var(--card-color) !important;
     border-color:var(--card-color) !important;
     color: var(--dark-text) !important;
+}
+
+.quote-btn{
+  background-color:#2d4c5e !important;
+  border-color: #2d4c5e !important ;
+  color: white;
+  min-width: 140px !important;
+  border-radius: 5px !important;
+  padding: 14px;
+}
+
+.quote-btn:hover{
+  background-color: var(--card-color) !important;
+  border-color:var(--card-color) !important;
+  color: var(--dark-text) !important;
 }
 
 .primary-outline-btn{
@@ -210,7 +225,7 @@ body{
 }
 
 .primary-text{
-  color: var(--primary-text);
+  color: var(--PrimaryColor);
 }
 
 .para-text{
@@ -281,7 +296,7 @@ color: var(--dark-text);
 }
 
 .bg-success{
-  background-color: var(--SuccessColor) !important;
+  background-color: #82c6ed !important;
 }
 
 .switchbtn{
@@ -319,6 +334,7 @@ color: var(--dark-text);
     color: var(--para-text);
     font-weight: 400;
     text-transform: capitalize;
+    text-align: left;
 }
 .error:not(.form-control):not(.form-select){
   color: var(--danger-text);
@@ -337,7 +353,7 @@ color: var(--dark-text);
     color: var(--whiteColor);
 }
 .nav-link:hover{
-    color:var(--SuccessColor) !important;
+    color:#2d4c5e !important;
 }
 .navbar{
     top: -35px;
@@ -354,12 +370,12 @@ color: var(--dark-text);
     width: 175px;
 }
 .logo{
-    width: 150px;
+    width: 200px;
 }
 
 @media(max-width:992px){
     .logo{
-        width: 95px;
+        width: 170px;
     }
 }
 /* ==================
@@ -500,15 +516,21 @@ color: var(--dark-text);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: 0 auto 20px;
   z-index: 99;
 }
 .cust_card_body{
   margin-top: -40px;
+  margin-bottom: 40px;
   min-height: 200px;
+  border: 1px solid var(--PrimaryColor);
 }
 .cust_card_body:hover{
   background-color: var(--PrimaryColor) !important;
+}
+
+.block-offering{
+  padding-top: 80px !important;
 }
 
   /* ==================
@@ -896,12 +918,13 @@ color: var(--dark-text);
     opacity: 1;
   }
   .splide__pagination__page.is-active{
-    background-color: var(--SuccessColor);
+    background-color: var(--PrimaryColor) !important;
+
     border: 2px solid white;
   }
   .cust_card_body2:hover{
-    background-color: var(--SuccessColor) !important;
-    border-color: var(--SuccessColor) !important;
+    background-color: var(--PrimaryColor) !important;
+    border-color: var(--PrimaryColor) !important;
   }
   .cust_card_body:hover h5, .cust_card_body:hover p {
       color: var(--whiteColor) !important;
@@ -1039,7 +1062,7 @@ color: var(--dark-text);
   .footer-hr{
     width: 45px;
     opacity: 1;
-    border: 0.5px solid var(--SuccessColor);
+    border: 0.5px solid var(--PrimaryColor);
   }
   .footer-copy{
     background-color: rgb(12, 54, 79);;

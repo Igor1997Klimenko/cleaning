@@ -191,7 +191,7 @@ var togButton = document.getElementById("btnSwitch");
 var currThemeMode = localStorage.getItem("sc_dark");
 if(!currThemeMode || currThemeMode == 'false'){
   document.documentElement.setAttribute("data-theme", "sc_light");
-  togButton.innerHTML = "<i class='fa fa-moon navtext-color'></i>";
+  // togButton.innerHTML = "<i class='fa fa-moon navtext-color'></i>";
 }
 else{
   document.documentElement.setAttribute("data-theme", "sc_dark");

@@ -42,9 +42,10 @@
   <!-- preloader -->
 
   <!-- switchbtn -->
-  <a href="javascript:void(0)" class="btn shadow-0 border-0 social-btn bg-success p-2 switchbtn" id="btnSwitch" aria-label="toggle mode">
+  <!-- <a href="javascript:void(0)" class="btn shadow-0 border-0 social-btn bg-success p-2 switchbtn" id="btnSwitch" aria-label="toggle mode">
   <i class="fa fa-moon primary-color fs-5"></i>
-  </a>
+  </a> -->
+  <a href="javascript:void(0)" id="btnSwitch" ></a>
   <!-- switchbtn End -->
 
   <!-- header & header second Row Starts Here  -->
@@ -97,7 +98,7 @@
       <div class="header-second-row">
         <div class="row align-items-center p-2 py-lg-4">
           <div class="col-10 col-lg-2 py-1">
-            <img src="assets/image1.png" alt="supercleaners" class="logo" />
+            <img src="assets/profestet.png" alt="supercleaners" class="logo"/>
           </div>
           <div class="col-10 d-none d-lg-block">
             <div class="d-flex gap-3 gap-xl-5 align-items-center justify-content-between justify-content-xl-end">
@@ -130,26 +131,26 @@
             </button>
             <div class="offcanvas offcanvas-start d-lg-none text-start body-color" tabindex="-1" id="offcanvasExample">
               <div class="offcanvas-header alt-bg">
-                <h5 class="offcanvas-title"> <img src="assets/image2.png" alt="logo" class="logo" /></h5>
+                <h5 class="offcanvas-title"> <img src="assets/profestet.png" alt="logo" class="logo" /></h5>
                 <button type="button" class="btn-close close outline-0 focus-0 shadow-none text-white border-0 text-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
               <div class="offcanvas-body">
                 <ul class="navbar-nav mb-5" id="offcanvas_ul">
                   <li class="nav-item py-1 p-lg-4">
-                    <a class="nav-link offcanvas-link text-dark" aria-current="page" href="#index">Home</a>
+                    <a class="nav-link offcanvas-link text-dark" aria-current="page" href="#index">Дом</a>
                   </li>
                   <li class="nav-item py-1">
-                    <a class="nav-link offcanvas-link text-dark" href="#about">About Us</a>
+                    <a class="nav-link offcanvas-link text-dark" href="#about">За нас</a>
                   </li>
                   <li class="nav-item py-1">
-                    <a class="nav-link offcanvas-link text-dark" href="#gallery">Gallery</a>
+                    <a class="nav-link offcanvas-link text-dark" href="#gallery">Галерия</a>
                   </li>
                   <li class="nav-item py-1">
-                    <a class="nav-link offcanvas-link text-dark" href="#contact">Contact</a>
+                    <a class="nav-link offcanvas-link text-dark" href="#contact">Контакти</a>
                   </li>
-                  <li class="nav-item py-1">
+                  <!-- <li class="nav-item py-1">
                     <a class="nav-link offcanvas-link text-dark" href="#socialmedia">Social Media</a>
-                  </li>
+                  </li> -->
                 </ul>
                 <div class="d-flex gap-3 align-items-center mb-3">
                   <i class="fa-solid fa-clock primary-text fs-2"></i>
@@ -231,22 +232,22 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav" id="nav_ul">
                 <li class="nav-item py-1 p-4 fs-5">
-                  <a class="nav-link text-white" aria-current="page" href="#header">Home</a>
+                  <a class="nav-link text-white" aria-current="page" href="#header">Дом</a>
                 </li>
                 <li class="nav-item py-1 p-4 fs-5">
-                  <a class="nav-link text-white" href="#about">About Us</a>
+                  <a class="nav-link text-white" href="#about">За нас</a>
                 </li>
                 <li class="nav-item py-1 p-4 fs-5">
-                  <a class="nav-link text-white" href="#gallery">Gallery</a>
+                  <a class="nav-link text-white" href="#gallery">Галерия</a>
                 </li>
                 <li class="nav-item py-1 p-4 fs-5">
-                  <a class="nav-link text-white" href="#contact">Contact</a>
+                  <a class="nav-link text-white" href="#contact">Контакти</a>
                 </li>
-                <li class="nav-item py-1 p-4 fs-5">
+                <!-- <li class="nav-item py-1 p-4 fs-5">
                   <a class="nav-link text-white" href="#socialmedia">Social Media</a>
-                </li>
+                </li> -->
               </ul>
-              <a href="#contact" class="btn success-btn custom_header_btn text-dark fw-semibold d-flex align-items-center justify-content-center">Get a Quote</a>
+              <a href="#contact" class="btn quote-btn custom_header_btn fw-semibold d-flex align-items-center justify-content-center">Get a Quote</a>
             </div>
           </div>
         </nav>
@@ -339,17 +340,18 @@
   <section class="services-main" id="services">
     <div class="container-lg py-2 py-lg-5 ">
       <div class="service-title text-center" data-aos="zoom-in" data-aos-duration="1500">
-        <img src="assets/image6.png" width="50" alt="star-element" class="mb-3" />
+        <img src="assets/image49.png" width="50" alt="star-element" class="mb-3" />
         <p class="m-0 text-uppercase para-text fs-5">our services</p>
         <h3 class="display-5 text-capitalize fw-bold primary-text m-0">what we are offering</h3>
       </div>
-      <div class="row py-5">
+      
+      <div class="row py-5 block-offering">
         <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0 " data-aos="zoom-in" data-aos-duration="1500">
           <div class="card border-0 bg-transparent">
-            <div class="card-img cust_card_img">
-              <img src="assets/image7.png" width="50" alt="home-clean-img" />
-            </div>
-            <div class="card-body h-100 card-color pt-5 cust_card_body shadow rounded-4 text-center">
+            <div class="card-body h-100 card-color pt-5 cust_card_body rounded-4 text-center">
+              <div class="card-img cust_card_img">
+                <img src="assets/image7.png" width="50" alt="home-clean-img" />
+              </div>
               <h5 class="text-primary fw-semibold ">Residential Cleaning</h5>
               <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae perspiciatis
                 praesentium necessitatibus quia, itaque laboriosam.</p>
@@ -359,10 +361,10 @@
         </div>
         <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0 " data-aos="zoom-in" data-aos-duration="1500">
           <div class="card border-0 bg-transparent">
-            <div class="card-img cust_card_img">
-              <img src="assets/image8.png" width="50" alt="home-clean-img2" />
-            </div>
-            <div class="card-body h-100 card-color pt-5 cust_card_body shadow rounded-4 text-center">
+            <div class="card-body h-100 card-color pt-5 cust_card_body rounded-4 text-center">
+              <div class="card-img cust_card_img">
+                <img src="assets/image8.png" width="50" alt="home-clean-img2" />
+              </div>
               <h5 class="text-primary fw-semibold ">Commercial Cleaning</h5>
               <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae perspiciatis
                 praesentium necessitatibus quia, itaque laboriosam.</p>
@@ -372,10 +374,10 @@
         </div>
         <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0 " data-aos="zoom-in" data-aos-duration="1500">
           <div class="card border-0 bg-transparent">
-            <div class="card-img cust_card_img">
-              <img src="assets/image9.png" width="50" alt="home-clean-img3" />
-            </div>
-            <div class="card-body h-100 card-color pt-5 cust_card_body shadow rounded-4 text-center">
+            <div class="card-body h-100 card-color pt-5 cust_card_body rounded-4 text-center">
+              <div class="card-img cust_card_img">
+                <img src="assets/image9.png" width="50" alt="home-clean-img3" />
+              </div>
               <h5 class="text-primary fw-semibold ">Apartment Cleaning</h5>
               <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae perspiciatis
                 praesentium necessitatibus quia, itaque laboriosam.</p>
@@ -385,10 +387,10 @@
         </div>
         <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0 " data-aos="zoom-in" data-aos-duration="1500">
           <div class="card border-0 bg-transparent">
-            <div class="card-img cust_card_img">
-              <img src="assets/image10.png" width="50" alt="home-clean-img4" />
-            </div>
-            <div class="card-body h-100 card-color pt-5 cust_card_body shadow rounded-4 text-center">
+            <div class="card-body h-100 card-color pt-5 cust_card_body rounded-4 text-center">
+              <div class="card-img cust_card_img">
+                <img src="assets/image10.png" width="50" alt="home-clean-img4" />
+              </div>
               <h5 class="text-primary fw-semibold ">Industrial Cleaning</h5>
               <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae perspiciatis
                 praesentium necessitatibus quia, itaque laboriosam.</p>
@@ -412,11 +414,11 @@
             <img src="assets/image13.webp" alt="cleaning3" class="w-100 object-fit-cover tall" />
             <img src="assets/image14.webp" alt="cleaning4" class="w-100 object-fit-cover" />
           </div>
-          <img src="assets/image15.png" width="150" alt="nets1" class="position-absolute about-net-1" />
-          <img src="assets/image16.png" width="150" alt="nets2" class="position-absolute about-net-2" />
+          <img src="assets/image35.png" width="150" alt="nets1" class="position-absolute about-net-1" />
+          <img src="assets/image35.png" width="150" alt="nets2" class="position-absolute about-net-2" />
         </div>
         <div class="col-lg-6 mt-5 mt-lg-0 pe-lg-5" data-aos="fade-down" data-aos-duration="1000">
-          <img src="assets/image17.png" width="50" alt="star-element2" class="mb-3" />
+          <img src="assets/image49.png" width="50" alt="star-element2" class="mb-3" />
           <p class="m-0 text-uppercase para-text ps-1 fs-5">know about us </p>
           <h3 class="display-5 text-capitalize fw-bold primary-text">quickly and easy to clean your office and house</h3>
           <p class="m-0 ps-1 description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, autem?
@@ -427,7 +429,7 @@
               <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sapiente quas harum
                 tenetur accusantium libero esse illum omnis eos? Delectus!</p>
             <div class="d-flex gap-3 my-4">
-              <i class="fa-regular fa-check-circle fs-4 text-success"></i>
+              <i class="fa-regular fa-check-circle fs-4 text-primary"></i>
               <div>
                 <h5 class="text-capitalize fw-semibold dark-text">Customer Focused Reviews </h5>
                 <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sapiente quas harum
@@ -435,7 +437,7 @@
               </div>
             </div>
             <div class="d-flex gap-3 my-4">
-              <i class="fa-regular fa-check-circle fs-4 text-success"></i>
+              <i class="fa-regular fa-check-circle fs-4 text-primary"></i>
               <div>
                 <h5 class="text-capitalize fw-semibold dark-text">Quality Work</h5>
                 <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sapiente quas harum
@@ -443,7 +445,7 @@
               </div>
             </div>
             <div class="d-flex gap-3 my-4">
-              <i class="fa-regular fa-check-circle fs-4 text-success"></i>
+              <i class="fa-regular fa-check-circle fs-4 text-primary"></i>
               <div>
                 <h5 class="text-capitalize fw-semibold dark-text">100% Customer Satisfaction</h5>
                 <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sapiente quas harum
@@ -461,7 +463,7 @@
   <section class="customers_main py-2 py-lg-5" id="gallery">
     <div class="container-lg">
       <div class="projects-title text-center" data-aos="zoom-in" data-aos-duration="1500">
-        <img src="assets/image18.png" width="50" alt="star-element3" class="mb-3" />
+        <img src="assets/image49.png" width="50" alt="star-element3" class="mb-3" />
         <p class="m-0 text-uppercase para-text fs-5">projects</p>
         <h3 class="display-5 text-capitalize fw-bold primary-text m-0">our latest projects</h3>
       </div>
@@ -592,24 +594,24 @@
             <img src="assets/image34.webp" alt="cleaning15" class="w-100 object-fit-cover" />
           </div>
           <img src="assets/image35.png" width="150" alt="nets3" class="position-absolute about-net-1" />
-          <img src="assets/image36.png" width="150" alt="nets4" class="position-absolute about-net-2" />
+          <img src="assets/image35.png" width="150" alt="nets4" class="position-absolute about-net-2" />
         </div>
         <div class="col-lg-6 mt-5 mt-lg-0 ps-lg-5" data-aos="zoom-in" data-aos-duration="1500">
-          <img src="assets/image37.png" width="50" alt="star-element4" class="mb-3" />
+          <img src="assets/image49.png" width="50" alt="star-element4" class="mb-3" />
           <p class="m-0 text-uppercase para-text fs-5 ps-1">why choose us </p>
           <h3 class="display-5 text-capitalize fw-bold primary-text m-0">Reasons to Choose Us</h3>
           <p class="m-0 ps-1 description">Behind our commitment to excellence are few key attributes that define who we
             are and what makes us different from any other.</p>
           <div class="my-4">
             <div class="d-flex gap-3 mb-2 ">
-              <i class="fa-regular fa-check-circle fs-4 text-success"></i>
+              <i class="fa-regular fa-check-circle fs-4 text-primary"></i>
               <div>
                 <h5 class="text-capitalize fw-semibold dark-text">Top-Rated Company</h5>
                 <p class="description">We have a confirmed tune document of making sure our clients' pride and refunding their bond money promptly.</p>
               </div>
             </div>
             <div class="d-flex gap-3 mb-2 ">
-              <i class="fa-regular fa-check-circle fs-4 text-success"></i>
+              <i class="fa-regular fa-check-circle fs-4 text-primary"></i>
               <div>
                 <h5 class="text-capitalize fw-semibold dark-text">Superior Quality</h5>
                 <p class="description">We use the most excellent quality tools and equipment to get all the dust and
@@ -618,7 +620,7 @@
               </div>
             </div>
             <div class="d-flex gap-3 mb-2 ">
-              <i class="fa-regular fa-check-circle fs-4 text-success"></i>
+              <i class="fa-regular fa-check-circle fs-4 text-primary"></i>
               <div>
                 <h5 class="text-capitalize fw-semibold dark-text">Eco-Friendly Products</h5>
                 <p class="description">We use eco-friendly products that are not harmful to the environment, pets or people in any way.
@@ -637,7 +639,7 @@
    <section class="faq-section body-color py-5" id="faq">
       <div class="container">
         <div class="projects-title text-center mb-5" data-aos="zoom-in" data-aos-duration="1500">
-          <img src="assets/image38.png" width="50" alt="star-element3" class="mb-3" />
+          <img src="assets/image49.png" width="50" alt="star-element3" class="mb-3" />
           <p class="m-0 text-uppercase para-text fs-5">FAQ'S</p>
           <h3 class="display-5 text-capitalize fw-bold primary-text m-0">Frequently Asked Questions</h3>
         </div>
@@ -765,7 +767,7 @@
   <!-- Counter Ends Here  -->
 
   <!-- Our Expert Team Section Starts Here  -->
-  <section class="py-3 py-lg-5 bg-alt">
+  <!-- <section class="py-3 py-lg-5 bg-alt">
     <div class="container">
       <div class="social_heading text-center mb-5 aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1500">
         <img src="assets/image44.png" width="50" alt="star-element8" class="mb-3" />
@@ -789,9 +791,9 @@
                 <div class="pbminfotech-box-content-inner">
                   <h4 class="pbmit-team-title dark-text">Savannah Nguyen</h4>
                   <div class="pbminfotech-box-team-position para-text">Co-Ordinator</div>
-                </div>
+                </div> -->
                 <!-- Social Icons -->
-                <div class="pbmit-social-icons">
+                <!-- <div class="pbmit-social-icons">
                   <ul>
                     <li><a href="#" aria-label="facebook"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="#" aria-label="twitter"><i class="fab fa-x-twitter"></i></a></li>
@@ -819,9 +821,9 @@
                 <div class="pbminfotech-box-content-inner">
                   <h4 class="pbmit-team-title dark-text">Leslie Alexander</h4>
                   <div class="pbminfotech-box-team-position para-text">Office Cleaner</div>
-                </div>
+                </div> -->
                 <!-- Social Icons -->
-                <div class="pbmit-social-icons">
+                <!-- <div class="pbmit-social-icons">
                   <ul>
                     <li><a href="#" aria-label="facebook"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="#" aria-label="twitter"><i class="fab fa-x-twitter"></i></a></li>
@@ -849,9 +851,9 @@
                 <div class="pbminfotech-box-content-inner">
                   <h4 class="pbmit-team-title dark-text">Ronald Richards</h4>
                   <div class="pbminfotech-box-team-position para-text">House Cleaner</div>
-                </div>
+                </div> -->
                 <!-- Social Icons -->
-                <div class="pbmit-social-icons">
+                <!-- <div class="pbmit-social-icons">
                   <ul>
                     <li><a href="#" aria-label="facebook"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="#" aria-label="twitter"><i class="fab fa-x-twitter"></i></a></li>
@@ -879,9 +881,9 @@
                 <div class="pbminfotech-box-content-inner">
                   <h4 class="pbmit-team-title dark-text">Mark Donald</h4>
                   <div class="pbminfotech-box-team-position para-text">Co-Ordinator</div>
-                </div>
+                </div> -->
                 <!-- Social Icons -->
-                <div class="pbmit-social-icons">
+                <!-- <div class="pbmit-social-icons">
                   <ul>
                     <li><a href="#" aria-label="facebook"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="#" aria-label="twitter"><i class="fab fa-x-twitter"></i></a></li>
@@ -895,7 +897,7 @@
         </div>  
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- Our Expert Team Section End Here  -->
   
   <!-- Contact Us Form Starts Here -->
@@ -1015,7 +1017,7 @@
   <section class="testimonial_main py-2 py-lg-5">
    <div class="container">
       <div class="testimonial_heading text-center mb-5" data-aos="zoom-in" data-aos-duration="1500">
-        <img src="assets/image50.png" width="50" alt="star-element7" class="mb-3" />
+        <img src="assets/image49.png" width="50" alt="star-element7" class="mb-3" />
         <p class="m-0 text-uppercase fs-5 ps-1 para-text">happy customers</p>
         <h3 class="display-5 text-capitalize fw-bold m-0 primary-text">what our customers say</h3>
       </div>
@@ -1150,7 +1152,7 @@
   <!-- Testimonials Ends Here -->
 
   <!-- Latest Social Media Post Start Here -->
-  <section class="social_media_main py-2 py-lg-5" id="socialmedia">
+  <!-- <section class="social_media_main py-2 py-lg-5" id="socialmedia">
     <div class="container">
       <div class="social_heading text-center mb-5" data-aos="zoom-in" data-aos-duration="1500">
         <img src="assets/image57.png" width="50" alt="star-element8" class="mb-3" />
@@ -1299,7 +1301,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
    <!-- Latest Social Media Post End Here -->
 
   <!-- Footer Starts Here  -->
@@ -1316,7 +1318,7 @@
             <form id="newsletter" action="send-email.php" method="POST">
               <div class="input-group bg-transparent">
                 <input type="text" class="form-control bg-transparent text-white shadow-none border-white py-3" placeholder="Enter Your Email" required="" name="n_email" aria-label="newsletter subscribe form" />
-                <button class="btn btn-light px-4" type="submit" name="newsletter" id="button-addon1" aria-label="subscribe newsletter button"><i class="fa-solid fa-paper-plane text-success"></i></button>
+                <button class="btn btn-light px-4" type="submit" name="newsletter" id="button-addon1" aria-label="subscribe newsletter button"><i class="fa-solid fa-paper-plane text-primary"></i></button>
               </div>
             </form>
           </div>
@@ -1327,7 +1329,7 @@
       <div class="footer-body">
         <div class="row px-sm-5 px-lg-0">
           <div class="col-12 mb-5 col-lg-4">
-            <img src="assets/image68.png" width="150" alt="footer-logo" />
+            <img src="assets/profestet.png" width="250" alt="footer-logo" />
             <p class="my-3 text-white">Amet minim mollit non deserunt ullamc est sit aliqua dolor amet sint. Amet minim
               mollit non deserunt ullamco est sit aliqua.</p>
             <div class="d-flex gap-3 align-items-center">

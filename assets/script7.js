@@ -290,30 +290,31 @@ window.onload = function () {
 };
 
 // 
-$(document).ready(function () {
-  const section = $('.bubble-section');
+document.addEventListener('DOMContentLoaded', () => {
+  const section = document.querySelector('.bubble-section');
+  if (!section) return;
 
   function createBubble() {
-    if ($(window).width() < 480) return; // не создаём пузырьки на мобильных
-    const sectionHeight = section.height();
+    if (window.innerWidth < 480) return;
 
-    const bubble = $('<div class="bubble"></div>');
+    const sectionHeight = section.offsetHeight;
+    const sectionWidth = section.offsetWidth;
+
+    const bubble = document.createElement('div');
+    bubble.classList.add('bubble');
 
     const size = Math.random() * 50 + 40;
-    const left = Math.random() * section.width();
+    bubble.style.width = size + 'px';
+    bubble.style.height = size + 'px';
+
+    const left = Math.random() * sectionWidth;
+    bubble.style.left = left + 'px';
+
+    bubble.style.top = '-50px';
+
     const duration = Math.random() * 30 + 30;
 
-    bubble.css({
-      width: size + 'px',
-      height: size + 'px',
-      left: left + 'px',
-      top: '-50px',
-      animationDuration: duration + 's',
-      transformStyle: 'preserve-3d',
-    });
-
-    const styleSheet = document.styleSheets[0];
-    const animName = `fallDownDynamic_${Date.now()}_${Math.floor(Math.random()*1000)}`;
+    const animName = `fallDownDynamic_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
 
     const keyframes = `
       @keyframes ${animName} {
@@ -322,17 +323,22 @@ $(document).ready(function () {
       }
     `;
 
+    const styleSheet = document.styleSheets[0];
     styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
-    bubble.css('animation-name', animName);
 
-    section.append(bubble);
+    bubble.style.animationName = animName;
+    bubble.style.animationDuration = duration + 's';
+    bubble.style.animationTimingFunction = 'linear';
+    bubble.style.animationFillMode = 'forwards';
+    bubble.style.transformStyle = 'preserve-3d';
+    section.appendChild(bubble);
 
     setTimeout(() => {
       bubble.remove();
     }, duration * 1000);
   }
 
-  if ($(window).width() >= 768) {
+  if (window.innerWidth >= 768) {
     setInterval(createBubble, 800);
   }
 });
